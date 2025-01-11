@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Insights</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">Social Media Insights</div>
+        
+    </nav>
+
+    <div class="container">
+        <h1>Social Media Engagement Insights</h1>
+        <div class="form-group">
+            <label for="postType">Select Post Type:</label>
+            <select id="postType">
+                <option value="">--Select--</option>
+                <option value="carousel">Carousel</option>
+                <option value="reels">Reels</option>
+                <option value="static">Static Images</option>
+            </select>
+        </div>
+        <button id="analyzeButton">Analyze Engagement</button>
+
+        <div id="loading" class="hidden">Loading...</div>
+        <div id="error" class="hidden"></div>
+
+        <div id="metrics" class="hidden">
+            <h2>Engagement Metrics</h2>
+            <p><span id="likes"></span></p>
+            <p><span id="shares"></span></p>
+            <p><span id="comments"></span></p>
+        </div>
+
+        <div id="insights" class="hidden">
+            <h2>Insights</h2>
+            <p id="insightsText"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 BugBuster Team</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
